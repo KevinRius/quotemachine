@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Container, Col, Row} from 'reactstrap' 
+import {Button, Container, Col, Row, Jumbotron} from 'reactstrap' 
 
 class App extends React.Component {
   state = {
@@ -46,12 +46,14 @@ class App extends React.Component {
       <Container id="quote-box" className="vh-100">
         <Row className="align-items-center h-75">
           <Col className="text-center">
-            <h1>Your quote is: </h1>
-            <h1 id="text">{this.state.content}</h1><br/>
-            <h1 id="author">{this.state.author}</h1>
-            <Button color="primary" onClick={this.handleClick} id="new-quote">Give quote!</Button>
-            <br/>
-            <a href="twitter.com/intent/tweet" id="tweet-quote">Tweet me!</a>
+          <Jumbotron>
+              <h1>Your quote is: </h1>
+              <h1 id="text">"{this.state.content}"</h1><br/>
+              <h1 id="author">{this.state.author}</h1>
+              <Button color="primary" onClick={this.handleClick} id="new-quote">Give quote!</Button>
+              <br/>
+              <a href="twitter.com/intent/tweet" id="tweet-quote">Tweet me!</a>
+            </Jumbotron>
           </Col>
         </Row>  
       </Container>
